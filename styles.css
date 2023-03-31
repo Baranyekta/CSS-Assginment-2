@@ -1,0 +1,259 @@
+/* import Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* quick reset*/
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; 
+}
+
+/* text format*/
+p{
+  font-size: 1.04rem;
+  line-height: 1.5;
+}
+
+/* header*/
+header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  transition: height 0.5s ease-out; /* transition time = 0.5s */
+}
+
+header p{
+  color: #6c757d;
+  font-family: 'Roboto', sans-serif; 
+}
+
+header .contact a {
+  text-decoration: none;
+  color: #e0dcdc;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+header .about,
+header .contact {
+  display: contents;
+}
+
+header.collapsed {
+  height: 30px;
+}
+
+header.collapsed .about,
+header.collapsed .contact {
+  display: none;
+}
+
+.back{
+  padding: 2em 0;
+  width: 100%;
+  background-color: #343a40;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.container{
+  padding-right: 4em;
+  width: 70vw;
+  display: flex;
+  gap: 7em;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container h2{
+  color: #fff;
+  padding-bottom: 0.5em;
+}
+
+.about{
+  width: 50vw;
+}
+
+.container2{
+  color: #fff;
+  background-color: #343a40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  padding-left: 9vw; 
+}
+
+.menu-button{
+  border: solid #6c757d 1px;
+  border-radius: 4px;
+  margin-right: 5em;
+  background-image: url("images/menu.jpg");
+  height: 36px;
+  width: 48px;
+  background-size: 48px;
+  background-repeat: no-repeat;
+} 
+
+.menu-button:hover{
+  cursor: pointer;
+}
+
+.container2 h2{
+  background-image: url("images/camera.jpg");
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 1.4rem;
+  margin-left: 1.4rem;
+}
+
+/* main - example*/
+.example{
+  padding: 6em 2em;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.example section {
+  display: flex;
+  gap: .5em;
+}
+
+.example p{
+  width: 40vw;
+
+}
+
+.example a{
+  text-decoration: none;
+  color: #fff;
+  border-spacing:inherit;
+  border: solid #6c757d 1px;
+  border-radius: 4px;
+  padding: 0.5em;
+  background-color: #6c757d;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.example a:nth-of-type(1){
+  border-color: #007bff;
+  background-color: #007bff;
+}
+
+.example a:hover{
+  background-color: #565c61;
+}
+
+.example a:nth-of-type(1):hover{
+  background-color: #0375ee;
+}
+
+/* main - sections*/
+.main-content section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 340px;
+  background-color: #fff;
+  margin: 2em 1em 4em;
+  border-spacing:inherit;
+  border: solid #6c757d 1px;
+  border-radius: 4px;
+}
+
+.info {
+  padding: 0em 1em 1em;
+}
+
+.small-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.button-container {
+  display: flex;
+  border-top: solid #6c757d 1px;
+  border-bottom: solid #6c757d 1px;
+  border-right: solid #6c757d 1px;
+  border-radius: 2px;
+}
+
+section button {
+  color:#565c61;
+  background-color: #fff;
+  border: none;
+  border-left: solid #6c757d 1px;
+  padding: 0.5em;
+}
+
+section button:hover{
+  cursor:pointer;
+  background-color: #6c757d;
+  color:#fff;
+  transition: 0.3s;
+}
+
+.main-content img {
+  width: 100%;
+}
+
+/* sections layout*/
+.main-content{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.content-container{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+@media (min-width: 1400px){
+  .content-container{
+      grid-template-columns: repeat(3, 25vw);
+  }
+  .container2{
+      padding-left: 10vw;
+  }
+  .menu{
+      margin-right: 10vw;
+  }
+}
+
+/* footer & footer links */
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7c7d80;
+  padding: 3em 2em;
+}
+
+footer a{
+  text-decoration: none;
+  color: #292cdf;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*got help from https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+for line 220- 227 on the index.html code file. */
